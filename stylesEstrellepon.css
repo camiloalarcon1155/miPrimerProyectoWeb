@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=PT+Serif:ital@1&family=Rye&display=swap');
+
+.tarjeta-de-mokepon:hover {
+    cursor: pointer;
+}
+
+  body{
+   font-family: 'Cinzel Decorative', cursive;
+   background-color: #100720; 
+  }
+
+
+#seleccionar-estrella{
+    display: flex;  /* para que tenga orentacion ya sea horizontal o vertical */
+    flex-direction: column; /* dirreccion en columna y no en fila como viene por defecto */
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.tituloGeneral {
+    color: white;
+    width: 1335px;
+    height: 69px;
+    background-color: #3D1766;
+    font-size: 50px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subtitulo-estrellas{
+    color: #47ef26;
+    font-size: 24px;
+    background: #3D1766;
+    margin: 10px;
+}
+
+/*  
+ .tarjetas {
+    display: flex;
+    gap: 10px; /* para añadir espacios entre los labels 
+} */
+
+
+.tarjetas{ 
+  display: grid;
+    grid-template-columns: 180px 180px 180px 180px;
+    width: 800px;
+    height: 340px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+ }
+
+
+.botones-ataques {
+    display: flex;
+    gap: 10px;
+    width: max-content;
+    align-items: center;
+    justify-content: center;   
+}
+
+
+
+ 
+
+.tarjeta-de-estrellas{
+    width: 170px;
+    height: 140px;
+    background: #6b749561;
+    padding: 10px;
+    box-sizing: border-box; /* para que el padding no aumente el area del contenido */
+    border-radius: 20px; /* para redondear bordes de labels */
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Rye', cursive;
+}
+
+ input {
+    display: none;
+}
+ 
+
+ input:checked + label{
+    background-color: #21db08;
+ }
+
+#boton-estrella{
+    
+    background: transparent;
+    height: 66px;
+    width: 224px;
+    color: #140080;
+    border: 6px solid #36d916;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    font-family: 'PT Serif', serif;
+    margin-top: 26px;
+    font-size: 30px;/* para adicionar borde en parte arriba de boton */
+}
+
+.tarjeta-de-estrellas img{
+    width: 68px;
+    height: 140px;
+    border-radius: 10px;
+}
+
+#seleccionar-ataque{
+    flex-direction: column;
+    align-items: center; 
+}
+
+
+
+#boton-fuego    {
+    background: darkred;
+    height: 70px;
+    width: 70px;
+    color: #FC7300;
+    border: 6px solid #FC7300;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-family: 'PT Serif', serif;
+    font-size: 30px;/* para adicionar borde en parte arriba de boton */
+}
+
+#boton-agua    {
+    background: #2734A3;
+    height: 70px;
+    width: 70px;
+    color: #0081C9;
+    border: 6px solid #0081C9;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-family: 'PT Serif', serif;
+    font-size: 30px;
+}
+
+#boton-tierra    {
+    background: #36d916;
+    height: 70px;
+    width: 70px;
+    color: #215803;
+    border: 6px solid #215803;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-family: 'PT Serif', serif;
+    font-size: 30px;
+}
+
+#boton-aire    {
+    background: aquamarine;
+    height: 70px;
+    width: 70px;
+    color: white;
+    border: 6px solid white;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-family: 'PT Serif', serif;
+    font-size: 30px;
+}
+
+#boton-rayo    {
+    background: yellow;
+    height: 70px;
+    width: 70px;
+    color: #dba23a;
+    border: 6px solid #dba23a;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-family: 'PT Serif', serif;
+    font-size: 30px;
+}
+
+#boton-hielo {
+    background: white;
+    height: 70px;
+    width: 70px;
+    color: #0081c9;
+    border: 6px solid #0081c9;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-family: 'PT Serif', serif;
+    font-size: 30px;
+}
+
+#boton-metal {
+        background: #808B96;
+    height: 70px;
+    width: 70px;
+    color: #6b7495;
+    border: 6px solid #6b7495;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-family: 'PT Serif', serif;
+    font-size: 30px;
+}
+
+#mensajes {
+    width: 381px;
+    height: 65px;
+    background: rgb(55 77 80);
+    color: white;
+    padding: 20px;
+    margin-top: 12px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* #vidas-jugador, #vidas-enemigo {
+    font-size: 20px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+}  */
+
+
+  
+  
+
+
+.ataques{
+    display: grid;
+    grid-template-columns: max-content;
+    /* align-items: baseline;  */
+    color: white;
+    /* text-align: center;  */
+    font-size: 15px;
+    background-color: transparent;
+    justify-items: center;
+}
+
+.nombres-estrellas {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 30px 30px;
+    justify-items: center;
+    align-items: center;
+    /* margin: 5px; */
+}
+
+
+
+.vidas-estrellas{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 30px;
+    justify-items: center;
+    align-items: center;
+    /* margin: 5px; */
+}
+
+.ataques-ambos-jugadores{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px; 
+    grid-template-rows:30px 30px 30px 30px 30px 30px 30px;
+    justify-items: center;
+    align-items: start;
+}
+
+.nombres-subtitulos{
+    color: blue;
+    /* margin: 0px; */
+}
+
+/* ataques-enemigo y ataques-jugador es ql que uso para mostrar en columna, cada ataque */
+
+/* #ataques-jugador, #ataques-enemigo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    font-size: 15px;
+} */
+
+/* #ataques-jugador, #ataques-enemigo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    font-size: 15px; */
+
+
+/*  #ataques-del-enemigo, #ataques-del-jugador {
+    display: grid;
+    justify-items: center;
+} 
+ */
+
+#ver-mapa {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* #mapa {
+    border: 2px solid white
+} */
+
+#ver-mapa button {
+    background: transparent;
+    height: 40px;
+    width: 80px;
+    color: #140080;
+    border: 2px solid #36d916;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    font-family: 'PT Serif', serif;
+    margin: 10px 0;
+    font-size: 10px;
+}
+
+@media (max-width: 360px) {
+    /* .tarjetas, .botones-ataques {
+        flex-direction: column;
+    } */
+
+    
+  .tarjetas{ 
+    display: grid;
+    grid-template-columns: 140px 140px;
+    width: 358px;
+    height: 453px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+ }
+
+    .tituloGeneral {
+        color: white;
+        width: 360px;
+        height: 70px;
+        background-color: #3D1766;
+        font-size: 20px;
+    }
+
+   .tarjeta-de-estrellas{
+    width: 130px;
+    height: 110px;
+    background: #6b749561;
+    padding: 10px;
+    box-sizing: border-box; /* para que el padding no aumente el area del contenido */
+    border-radius: 20px; /* para redondear bordes de labels */
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    font-family: 'Rye', cursive;
+    font-size: 12px;
+}
+
+  .tarjeta-de-estrellas img{
+    width: 59px;
+    height: 77px;
+    border-radius: 10px;
+
+  }
+
+  .botones-ataques{
+    display: grid;
+    grid-template-columns: 72px 72px 72px;
+    width: 358px;
+    height: 290px
+    
+  }
+
+    #boton-fuego    {
+    background: darkred;
+    height: 66px;
+    width: 80px;
+    color: #FC7300;
+    border: 6px solid #FC7300;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-family: 'PT Serif', serif;
+    font-size: 30px;/* para adicionar borde en parte arriba de boton */
+}
+
+    #boton-agua    {
+    background: #2734A3;
+    height: 66px;
+    width: 80px;
+    color: #0081C9;
+    border: 6px solid #0081C9;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-family: 'PT Serif', serif;
+    font-size: 30px;
+}
+
+    #boton-tierra    {
+    background: #36d916;
+    height: 66px;
+    width: 80px;
+    color: #215803;
+    border: 6px solid #215803;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-family: 'PT Serif', serif;
+    font-size: 30px;
+}
+
+    #boton-aire    {
+    background: aquamarine;
+    height: 66px;
+    width: 80px;
+    color: white;
+    border: 6px solid white;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-family: 'PT Serif', serif;
+    font-size: 30px;
+}
+
+    #boton-rayo    {
+    background: yellow;
+    height: 66px;
+    width: 80px;
+    color: #dba23a;
+    border: 6px solid #dba23a;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-family: 'PT Serif', serif;
+    font-size: 30px;
+}
+
+
+    #mensajes {
+    width: 307px;
+    height: 100px;
+    background: black;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    }
+}
+
+@media (max-width: 360px) {
+    #ver-mapa div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="UTF-8"/>
+            <title>ESTRELLEPON</title>  
+            <link rel="stylesheet" href="./stylesEstrellepon.css"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
+    </head>
+    <body>
+        <section id="seleccionar-estrella">
+            <h1 class="tituloGeneral">⚡🔥💧🌪🌎ESTRELLAS DE LOS ELEMENTOS🌎🌪💧🔥⚡</h1>
+            
+            <h2  class="subtitulo-estrellas">👇Elige tu estrella👇</h2>
+
+            <div id="contenedorTarjetasPersonajes" class="tarjetas"> 
+
+           
+        
+                  <!-- aqui es donde se van a mostrar las estrellas con el forEach, por eso se borran los inputs y labels --> 
+
+            <!-- <input type="radio" name="estrella" id="lizeth"/>
+            <label class="tarjeta-de-estrellas" for="lizeth">
+                <p>💧Lizeth💧</p>
+                <img src="./assets/lizeth.jpg" alt="Lizeth">
+            </label>
+            
+            <input type="radio" name="estrella" id="danilo"/> 
+            <label class="tarjeta-de-estrellas" for="danilo">
+                <p>⚡Danilo⚡</p>
+                <img src="./assets/danilo.jpg" alt="Danilo">
+            </label>
+
+            <input type="radio" name="estrella"  id="camilo"/> 
+             <label class="tarjeta-de-estrellas" for="camilo">
+                <p>🔥Camilo🔥</p>
+                <img src="./assets/camilo.jpg" alt="Camilo">
+            </label>
+                        
+            <input type="radio" name="estrella"  id="isabel"/> 
+            <label class="tarjeta-de-estrellas" for="isabel">
+                <p>🌎Isabel🌎</p>
+                <img src="./assets/isabel.jpg" alt="Isabel">
+            </label> -->
+             
+                
+            </div>
+
+            <button id="boton-estrella">Seleccionar</button>
+        </section>
+
+        <section id="ver-mapa">
+            <h2 class="subtitulo-estrellas">Recorre el mapa con tu estrella</h2>
+            <canvas id="mapa"></canvas> <!-- crea el mapa en pantalla -->
+            <!-- <button onclick="moverArriba()">Arriba</button> --> <!-- Onclick cuando se le haga click va a llamar a la funcion mover -->
+            <button
+                ontouchend = "detenerMovimiento()" 
+                onmouseup = "detenerMovimiento()" 
+                ontouchstart ="moverArriba()"
+                onmousedown ="moverArriba()"
+            >Arriba</button>
+            <div><button  
+                ontouchend = "detenerMovimiento()"
+                onmouseup = "detenerMovimiento()" 
+                ontouchstart ="moverIzquierda()"
+                onmousedown ="moverIzquierda()"
+                >Izquierda</button> 
+            <button  
+                onmouseup = "detenerMovimiento()" 
+                ontouchend = "detenerMovimiento()"
+                ontouchstart ="moverAbajo()"
+                onmousedown ="moverAbajo()"
+                >Abajo</button> 
+            <button
+                onmouseup = "detenerMovimiento()" 
+                ontouchend = "detenerMovimiento()"
+                onmousedown ="moverDerecha()"
+                ontouchstart ="moverDerecha()"
+                >Derecha</button> <!-- onmousedown para que se ejecute mientras esta presionado el mouse --></div>
+            
+        </section>
+
+
+        <section id="seleccionar-ataque">
+            <h1 class="tituloGeneral">⚡🔥💧🌪🌎ESTRELLAS DE LOS ELEMENTOS🌎🌪💧🔥⚡</h1>
+
+        
+            <!-- <h2 id="subtituloEstrellas" class="subtitulo-estrellas">👇Elige el orden de tus 7 ataques👇</h2> -->
+            <h2 id="subtituloEstrellas" class="subtitulo-estrellas">👇Elige el orden de tus 7 ataques👇</h2> <!--no me permitio tener las id similares con el anterior subtitulo, asi tenga la misma class (para desaparecer el subtitulo cuando llegue el juego al pre-final). No me la desaparecia  -->
+
+            <div id="contenedorAtaques" class="botones-ataques">
+                
+                
+                <!--  aqui es donde se van a mostrar los botones de poderes con el forEach, por eso se borraron los botones 
+                <button id="boton-fuego">fuego 🔥</button>
+                <button id="boton-agua">agua 💧</button>
+                <button id="boton-tierra">tierra 🍀</button>
+                <button id="boton-aire">aire 🌪</button>
+                <button id="boton-rayo">rayo ⚡</button>  -->
+
+            </div>
+
+            
+                <div id="mensajes">
+                    <span id="resultado">!!demuestra que sabes jugar!!</span>
+                         <!-- <p>Tu estrella atacó con fuego, la estrella del enemigo atacó con tierra-GANASTE 🎉✨ </p>  -->
+                    <section id="reiniciar">
+                        <button id="boton-reiniciar">Reiniciar</button>
+                    </section>
+                </div>
+            <div class="ataques">
+                <!-- <div class="ataques-jugador"> -->
+
+                    <div class="nombres-estrellas"> 
+                        <p></p>
+                        <p class="nombres-subtitulos">Jugador</p>
+                        <p class="nombres-subtitulos">Enemigo</p>
+                        <p class="nombres-subtitulos">Resultado</p>
+                        <p class="nombres-subtitulos">Jugadores:</p>
+                        <p id="estrella-jugador"></p>
+                        <p id="estrella-enemigo"></p>
+                        <p></p>
+                    </div>
+
+                    <div class="vidas-estrellas"> 
+                        <p class="nombres-subtitulos">victorias:</p>
+                        <p id="vidas-jugador">0</p>
+                        <p id="vidas-enemigo">0</p>
+                        <p></p>
+                    </div>
+                    
+                    <div class="ataques-ambos-jugadores"> 
+                        <div class="nombres-subtitulos" id="numAtaques"></div>
+                        <div id="ataques-del-jugador"></div>
+                        <div id="ataques-del-enemigo"></div>
+                        <div id="mensaje-cada-ataque"></div>
+                    </div>
+                </div>
+
+                <!--  <div class="ataques-ambos-jugadores">
+                    <div> 
+                        <h3>ataques del jugador</h3>
+                        <div id="ataques-del-jugador"></div>
+                        <div id="ataques-del-enemigo"></div>
+                    </div>
+                </div> -->
+
+        </section>
+        <!-- <script src="./js/estrellepon.js"></script>-->
+        <!-- en la anterior linea esta como me funcionaba cuando los archivos del juego estaban en carpetas desde el computador, pero al pasarlo a carpeta public para conectar con otros dispositivos, tuve que usar la linea de enseguida y cambiar el nombre del HTML  a index.html -->
+            <script src="./estrellepon.js"></script>
+     </body>
+</html>
+
+
+
